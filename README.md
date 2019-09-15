@@ -1,1 +1,1 @@
-# pokedex
+# Pokedex - A GraphQL Sandbox
