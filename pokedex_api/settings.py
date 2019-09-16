@@ -37,6 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #Private apps
+    'pokedex.apps.PokedexConfig',
+
+    #Thirds party apps
+    'graphene_django',
+    'django_filters'
 ]
 
 MIDDLEWARE = [
@@ -118,3 +124,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#Graphene configuration
+GRAPHENE = {
+    'SCHEMA': 'pokedex_api.schema.schema',
+    'MIDDLEWARE': [
+        'graphene_django.debug.DjangoDebugMiddleware'
+    ]
+}
